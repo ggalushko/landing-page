@@ -5,14 +5,14 @@ function BurgerButton(props: {
   setIsOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const figureClass =
-    "w-10 h-[6px] bg-secondary rounded-lg transition-transform  duration-700  ease-in-out";
+    "w-10 h-[6px] bg-secondary rounded-lg transition-transform  duration-1000  ease-in-out";
   return (
     <button onClick={() => props.setIsOpened(!props.isOpened)} className="z-10">
       <div className="flex flex-col gap-y-2">
         <figure
           className={
             figureClass +
-            `${props.isOpened ? " rotate-[405deg] translate-y-3" : ""}`
+            `${props.isOpened ? " rotate-[225deg] translate-y-3" : ""}`
           }
         ></figure>
         <figure
@@ -26,7 +26,7 @@ function BurgerButton(props: {
         <figure
           className={
             figureClass +
-            `${props.isOpened ? " -rotate-[405deg] -translate-y-4" : ""}`
+            `${props.isOpened ? " -rotate-[225deg] -translate-y-4" : ""}`
           }
         ></figure>
       </div>
