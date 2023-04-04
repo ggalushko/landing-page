@@ -9,9 +9,9 @@ function App() {
     <>
       <Header />
       <Hero />
-      <Testimonial/>
-      <Showcase/>
-      <Pricing/>
+      <Testimonial />
+      <Showcase />
+      <Pricing />
     </>
   );
 }
