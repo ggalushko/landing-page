@@ -6,8 +6,13 @@ export default {
       colors: {
         "secondary": "#BBBBBB",
         "link": "#A2C3F9",
-        "button": "rgba(100, 157, 249, 0.4)"
-      }
+        "button": "rgba(100, 157, 249, 0.4)",
+        "shadowed": "#767676",
+        "dark": "#323232"
+      },
+       borderRadius: {
+        "4xl" : "32px"
+       }
     },
   },
   plugins: [],
