@@ -1,4 +1,4 @@
-function ShowCaseCard() {
+function ShowcaseCard() {
   return (
     <div className="flex flex-col w-[350px] gap-4">
       <img className="w-[350px] h-[200px] mb-4 rounded-4xl bg-white"></img>
@@ -12,11 +12,10 @@ function ShowCaseCard() {
         {" "}
         Yes, it is indeed a text, Yes, it is indeed a text, Yes, it is indeed a
         text, Yes, it is indeed a text, Yes, it is indeed a text, Yes, it is
-        Yes, it is indeed a text,
-        indeed a text,
+        Yes, it is indeed a text, indeed a text,
       </p>
     </div>
   );
 }
 
-export default ShowCaseCard;
+export default ShowcaseCard;

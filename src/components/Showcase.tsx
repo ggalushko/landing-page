@@ -1,4 +1,4 @@
-import ShowCaseCard from "./ShowCaseCard";
+import ShowcaseCard from "./ShowcaseCard";
 
 function Showcase() {
   return (
@@ -15,9 +15,9 @@ function Showcase() {
         </p>
       </div>
       <div className="flex gap-10 flex-wrap justify-center mt-24">
-        <ShowCaseCard />
-        <ShowCaseCard />
-        <ShowCaseCard />
+        <ShowcaseCard />
+        <ShowcaseCard />
+        <ShowcaseCard />
       </div>
       <button className="w-36 p-2 bg-button text-link rounded-md mt-14 block mx-auto">
         Button text
