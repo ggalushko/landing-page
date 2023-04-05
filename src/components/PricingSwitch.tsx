@@ -1,34 +1,59 @@
 import { useState } from "react";
 
 function PricingSwitch() {
-  const [sliderPosition, setSliderPosition] = useState(false);
+  const [sliderPosition, setSliderPosition] = useState<1 | 2 | 3>(1);
+
   return (
     <div
-      className={`w-48 py-3 flex gap-6  bg-white text-black rounded-3xl justify-center mx-auto mt-10 relative mb-10
-      before:w-[100px] before:h-[88%] before:bg-black before:absolute before:left-1 before:bottom-[3px] before:rounded-3xl
-       before:z-0 before:transition-transform cursor-pointer ${
-         sliderPosition ? "before:translate-x-[86px]" : ""
+      className={` w-72 py-3 flex gap-6  bg-white text-black rounded-3xl justify-center relative
+      before:w-[33%] before:h-[88%] before:bg-black before:absolute before:left-[3%] before:bottom-[5%] before:rounded-3xl
+       before:z-0 before:transition-transform cursor-pointer ${getSliderTranslate(
+         sliderPosition
+       )} 
        }`}
-      onClick={() => {
-        setSliderPosition(!sliderPosition);
-      }}
     >
       <p
         className={`z-10  transition-colors duration-300 ${
-          sliderPosition ? "" : "text-white"
+          sliderPosition == 1 ? "text-white" : ""
         }`}
+        onClick={() => {
+          setSliderPosition(1);
+        }}
       >
         Option A
       </p>
       <p
         className={`z-10 transition-colors duration-300  ${
-          sliderPosition ? "text-white" : ""
+          sliderPosition == 2 ? "text-white" : ""
         }`}
+        onClick={() => {
+          setSliderPosition(2);
+        }}
       >
         Option B
       </p>
+      <p
+        className={`z-10 transition-colors duration-300  ${
+          sliderPosition == 3 ? "text-white" : ""
+        }`}
+        onClick={() => {
+          setSliderPosition(3);
+        }}
+      >
+        Option C
+      </p>
     </div>
   );
+  function getSliderTranslate(position: number) {
+    switch (position) {
+      case 1:
+        return "";
+      case 2:
+        return "before:translate-x-[94%]";
+      case 3:
+        return "before:translate-x-[186%]";
+    }
+  }
 }
 
 export default PricingSwitch;

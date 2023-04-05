@@ -1,6 +1,5 @@
-import { useState } from "react";
+
 import PricingCard from "./PricingCard";
-import PricingSwitch from "./PricingSwitch";
 
 function Pricing() {
   return (
@@ -16,8 +15,7 @@ function Pricing() {
           indeed a text, Yes, it is indeed a text,
         </p>
       </div>
-      <PricingSwitch />
-      <div className="flex justify-around mb-40">
+      <div className="flex justify-between mb-40 mt-20">
         <PricingCard />
         <PricingCard />
         <PricingCard />

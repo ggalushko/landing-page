@@ -3,7 +3,7 @@ import PricingInput from "./PricingInput";
 function PricingCard() {
   return (
     <div
-      className="h-[500px] w-[340px] px-7 py-4  bg-white rounded-3xl flex flex-col text-black shrink-0
+      className="sm:w-[400px] lg:w-[300px] xl:w-[340px] px-6 py-4  bg-white rounded-3xl flex flex-col text-black shrink-0
     shadow-2xl hover:shadow-sky-500 transition-all hover:scale-105 duration-500"
     >
       <h3 className="text-xl font-bold">Package</h3>
