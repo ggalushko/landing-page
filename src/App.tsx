@@ -1,4 +1,6 @@
+import CallToAction from "./components/CallToAction";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Pricing from "./components/Pricing";
@@ -11,10 +13,12 @@ function App() {
     <>
       <Header />
       <Hero />
+      <CallToAction/>
       <Testimonial />
       <Showcase />
       {window.innerWidth > 1024 ? <Pricing /> : <PricingMobile />}
       <Contact/>
+      <Footer/>
     </>
   );
 }
