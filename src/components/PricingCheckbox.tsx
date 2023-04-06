@@ -1,4 +1,4 @@
-function PricingInput() {
+function PricingCheckbox() {
   return (
     <div className="flex items-center">
       <input
@@ -11,4 +11,4 @@ function PricingInput() {
   );
 }
 
-export default PricingInput;
+export default PricingCheckbox;

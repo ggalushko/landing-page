@@ -1,4 +1,4 @@
-import PricingInput from "./PricingInput";
+import PricingCheckbox from "./PricingCheckbox";
 
 function PricingCard() {
   return (
@@ -14,10 +14,10 @@ function PricingCard() {
         Package description bla bla bla bla bla bla bla
       </p>
       <form className="flex flex-col gap-4 mt-6 text-black font-semibold">
-        <PricingInput />
-        <PricingInput />
-        <PricingInput />
-        <PricingInput />
+        <PricingCheckbox />
+        <PricingCheckbox />
+        <PricingCheckbox />
+        <PricingCheckbox />
         <button className=" w-full bg-blue-600 py-2 rounded-lg text-white mt-9">
           BUY
         </button>
