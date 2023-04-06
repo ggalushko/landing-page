@@ -1,14 +1,11 @@
+import SectionText from "./SectionText";
 import SocialIcons from "./SocialIcons";
 
 function Contact() {
   return (
     <div className="mt-40 flex flex-col md:flex-row justify-between">
       <div className="md:w-[40%] flex flex-col gap-14">
-        <h2 className="text-4xl sm:text-5xl font-bold">Any questions left?</h2>
-        <p className=" text-xl text-shadowed">
-          Feel free to contacts us if you want more information. We would be
-          glad to help you learn more about our products
-        </p>
+        <SectionText />
         <SocialIcons />
       </div>
       <form className=" bg-dark p-4 lg:p-8 rounded-xl flex flex-col md:w-[48%] text-xl gap-4 mt-10 md:mt-0">
