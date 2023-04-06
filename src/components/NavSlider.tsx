@@ -5,7 +5,7 @@ function NavSlider(props: { isOpened: boolean }) {
         props.isOpened ? " translate-x-[-100%]" : ""
       }`}
     >
-      <nav className="text-white flex flex-col gap-6 items-center mt-32">
+      <nav className="text-white flex flex-col gap-16 items-center mt-40 text-xl">
         <a href="#">Nav</a>
         <a href="#">Nav</a>
         <a href="#">Nav</a>

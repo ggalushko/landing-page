@@ -3,10 +3,10 @@ import PricingSwitch from "./PricingSwitch";
 
 function PricingMobile() {
   return (
-    <div className="flex flex-col gap-12 items-center mt-20">
+    <section className="flex flex-col gap-12 items-center mt-20">
       <PricingSwitch />
       <PricingCard />
-    </div>
+    </section>
   );
 }
 

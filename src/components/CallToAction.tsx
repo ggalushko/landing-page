@@ -1,7 +1,7 @@
 function CallToAction() {
   return (
-    <div className="bg-dark flex flex-col gap-12 sm:gap-20 rounded-3xl px-10 py-20 my-20 items-center text-center">
-      <h2 className="text-5xl font-bold">
+    <section className="bg-dark flex flex-col gap-12 sm:gap-20 rounded-3xl px-10 py-20 mt-20 items-center text-center">
+      <h2 className="text-4xl sm:text-5xl font-bold">
         Hello there. <br /> Give us money please
       </h2>
       <p className=" text-xl text-shadowed md:w-3/5">
@@ -13,7 +13,7 @@ function CallToAction() {
       <button className="w-36 p-2 bg-button text-link rounded-md my-3">
         Button text
       </button>
-    </div>
+    </section>
   );
 }
 

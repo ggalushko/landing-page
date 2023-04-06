@@ -10,7 +10,7 @@ function PricingCard() {
       <div className="flex items-center gap-2 mt-7">
         <p className="text-4xl font-bold">0.00$</p> <p>/Month</p>
       </div>
-      <p className="text-shadowed font-semibold mt-6  w-8/12">
+      <p className="text-shadowed font-semibold text-xl mt-6  w-8/12">
         Package description bla bla bla bla bla bla bla
       </p>
       <form className="flex flex-col gap-4 mt-6 text-black font-semibold">

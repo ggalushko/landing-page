@@ -1,11 +1,14 @@
 import BurgerMenu from "./BurgerMenu";
 
 function Header() {
-  const hasSmallScreen = window.innerWidth < 760;
+  const hasSmallScreen = window.innerWidth < 900;
   return (
     <header className="flex justify-between w-full py-10 items-center gap-6">
       <div className="flex gap-5 items-center h-10">
-        <img src="../../src/assets/images/logo.png" className="w-20 rounded-md bg-contain bg-center"></img>
+        <img
+          src="../../src/assets/images/logo.png"
+          className="w-20 rounded-md bg-contain bg-center"
+        ></img>
         <p className=" text-3xl pb-1 font-semibold tracking-wider">Robotica</p>
       </div>
       {!hasSmallScreen ? (
@@ -18,10 +21,7 @@ function Header() {
         </nav>
       ) : null}
       {!hasSmallScreen && (
-        <button
-          className="w-36 p-2 bg-button text-link rounded-md my-3"
-          onClick={() => console.log(window.innerWidth)}
-        >
+        <button className="w-36 p-2 bg-button text-link rounded-md my-3">
           Button text
         </button>
       )}

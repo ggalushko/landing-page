@@ -14,8 +14,8 @@ function Footer() {
             Robotica
           </p>
         </div>
-        <SocialIcons/>
-        <div className="flex items-center justify-center gap-3 h-10">
+        <SocialIcons />
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 h-10 mt-10 sm:mt-0">
           <input
             type="email"
             placeholder="Enter email"

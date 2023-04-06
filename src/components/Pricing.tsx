@@ -1,11 +1,10 @@
-
 import PricingCard from "./PricingCard";
 
 function Pricing() {
   return (
-    <div className="pt-20">
+    <section className="pt-20">
       <div className="max-w-[700px] mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h2 className="text-4xl sm:text-5xl font-bold">
           Yes, it is indeed a text, <br /> Yes, it is indeed a text, Yes, it is
           indeed a text,
         </h2>
@@ -20,7 +19,7 @@ function Pricing() {
         <PricingCard />
         <PricingCard />
       </div>
-    </div>
+    </section>
   );
 }
 
