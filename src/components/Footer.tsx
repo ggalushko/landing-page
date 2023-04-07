@@ -4,6 +4,7 @@ import SocialIcons from "./SocialIcons";
 function Footer() {
   return (
     <footer className="py-14">
+      <figure className="w-full h-1 bg-dark my-6"></figure>
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-7 md:gap-0">
         <div className="flex flex-col lg:flex-row gap-5 items-center">
           <img
@@ -14,6 +15,12 @@ function Footer() {
             Robotica
           </p>
         </div>
+        <p className=" text-xl text-shadowed text-center mt-5">
+          {" "}
+          2077. All rights reserved. <br />
+          Robotica LTC, Japan, Tokyo, Kagaku-teki 1234
+          <br />+ 1 (2345) 1932 020
+        </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 h-10 mt-10 sm:mt-0">
           <input
             type="email"
@@ -25,14 +32,6 @@ function Footer() {
           </button>
         </div>
       </div>
-      <figure className="w-full h-1 bg-dark mt-10"></figure>
-
-      <p className=" text-xl text-shadowed text-center mt-5">
-        {" "}
-        2077. All rights reserved. <br />
-        Robotica LTC, Japan, Tokyo, Kagaku-teki 1234
-        <br />+ 1 (2345) 1932 020
-      </p>
     </footer>
   );
 }
