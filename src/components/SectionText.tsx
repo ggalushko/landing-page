@@ -1,16 +1,16 @@
 import React from "react";
-
-function SectionText() {
+type props = {
+  header: string,
+  text: string
+}
+function SectionText({header, text}: props) {
   return (
     <div className="max-w-[700px] mx-auto text-center">
       <h2 className="text-4xl sm:text-5xl font-bold">
-        Yes, it is indeed a text, <br /> Yes, it is indeed a text, Yes, it is
-        indeed a text,
+        {header}
       </h2>
       <p className="text-secondary font-medium text-xl mt-10">
-        Yes, it is indeed a text, Yes, it is indeed a text, Yes, it is indeed a
-        text, Yes, it is indeed a text, Yes, it is indeed a text, Yes, it is
-        indeed a text, Yes, it is indeed a text,
+        {text}
       </p>
     </div>
   );

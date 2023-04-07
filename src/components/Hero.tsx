@@ -10,14 +10,26 @@ function Hero() {
     "w-36 h-36 sm:w-48 sm:h-48 transition-transform duration-500 rounded-4xl bg-white";
 
   return (
-    <section className="mt-24">
+    <section className="mt-12">
+      <div className="flex h-1/5">
+        <img
+          src="../../src/assets/images/hand-2.png"
+          className="mr-0 ml-auto -translate-x-[15px] xs:-translate-x-[60px] w-1/2"
+        ></img>
+        <img
+          src="../../src/assets/images/hand.png"
+          className="mr-0 ml-auto translate-x-[15px] xs:translate-x-[50px] w-1/2"
+        ></img>
+      </div>
       <h1 className="font-bold text-5xl md:text-7xl text-left">
-        Some text blabla. <br /> Yes, it is indeed a text, but longer.
+        The Revolution. <br /> Experience the Future of Prosthetics
+        with Robotica.
       </h1>
       <div>
         <p className=" text-secondary text-left max-w-[540px] text-xl my-10">
-          Yes, it is indeed a text, Yes, it is indeed a text, Yes, it is indeed
-          a text,Yes, it is indeed a text, Yes, it is indeed a text,
+          Welcome to Robotica, where we are committed to providing cutting-edge
+          robotic prosthetics that are designed to improve the mobility and
+          independence of our customers.
         </p>
         <div className="sm:ml-0 sm:mr-auto w-fit flex gap-6 flex-col sm:flex-row">
           <button className="w-60 bg-button text-link rounded-md py-1 block">

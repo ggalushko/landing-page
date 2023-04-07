@@ -14,7 +14,6 @@ function Footer() {
             Robotica
           </p>
         </div>
-        <SocialIcons />
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 h-10 mt-10 sm:mt-0">
           <input
             type="email"
@@ -30,7 +29,9 @@ function Footer() {
 
       <p className=" text-xl text-shadowed text-center mt-5">
         {" "}
-        Info info. Bla bla bla. All rights reserved. <br /> Hehe hoho huhuhu
+        2077. All rights reserved. <br />
+        Robotica LTC, Japan, Tokyo, Kagaku-teki 1234
+        <br />+ 1 (2345) 1932 020
       </p>
     </footer>
   );
