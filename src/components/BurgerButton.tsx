@@ -7,7 +7,7 @@ function BurgerButton(props: {
   const figureClass =
     "w-10 h-[6px] bg-secondary rounded-lg transition-transform  duration-1000  ease-in-out";
   return (
-    <button onClick={() => props.setIsOpened(!props.isOpened)} className="z-10">
+    <button onClick={() => props.setIsOpened(!props.isOpened)} className="z-20">
       <div className="flex flex-col gap-y-2">
         <figure
           className={
