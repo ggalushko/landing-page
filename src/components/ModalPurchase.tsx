@@ -1,21 +1,26 @@
 import { useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { close } from "../store/modalSlice";
+import { RootState } from "../store/store";
 
 function ModalPurchase() {
   const modalRef = useRef<HTMLDivElement | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
+  const sliceData = useSelector((state: RootState) => state.modal);
+  const dispatch = useDispatch();
 
   return (
     <div
       ref={modalRef}
-      className="w-screen h-screen absolute top-0 right-0 bg-modal grid place-content-center 
-       duration-1000 transition-opacity"
+      className={` w-full h-full fixed top-0 right-0 bg-modal grid place-content-center
+       duration-700 transition-opacity ${
+         sliceData.isOpened ? "" : sliceData.hideClass
+       }`}
       onMouseDown={(e) => {
         e.stopPropagation();
         const isTargetArea =
           e.target == modalRef.current || e.target == closeBtnRef.current;
-        isTargetArea &&
-          modalRef.current?.classList.add("opacity-0", "pointer-events-none");
-        console.log(modalRef);
+        isTargetArea && dispatch(close());
       }}
     >
       <form className=" bg-dark p-8 rounded-xl flex flex-col text-xl gap-4 relative">
