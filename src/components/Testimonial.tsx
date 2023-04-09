@@ -1,33 +1,11 @@
 import { useRef, useState } from "react";
+import reviews from "../assets/data/reviews.json";
+const feedbacks = reviews;
 
 type feedback = {
   text: string;
   name: string;
   link: string;
-};
-
-const feedbacks = {
-  first: {
-    text: `I was blown away by the quality of the prosthetic limb I received from Robotica. 
-    It's comfortable to wear and has held up to all of my daily activities. The customer service was exceptional 
-    and they helped guide me through the entire process. I couldn't be happier with my purchase.`,
-    name: "Johanna Henson",
-    link: "@jhnhnsn",
-  },
-  second: {
-    text: `I can't thank Robotica enough for the amazing robotic prosthetic limb they created for me. 
-    The customization options were perfect for my needs and the AI module has greatly improved my control and mobility. 
-    I highly recommend this company to anyone in need of a prosthetic limb.`,
-    name: "Ethan Burton",
-    link: "@3_burt0n",
-  },
-  third: {
-    text: `As an athlete, finding a prosthetic limb that could keep up with my level of activity was essential. 
-    Robotica delivered exactly what I needed with their sports prosthetic limb. The range of motion and control is incredible 
-    and it's helped me to excel in my sport. Thank you, Robotica!`,
-    name: "Elijah Wilmer",
-    link: "@wilmer92",
-  },
 };
 
 function Testimonial() {
