@@ -7,14 +7,14 @@ function Hero() {
   const img4ref = useRef<HTMLImageElement>(null);
   const imgs = [img1ref, img2ref, img3ref, img4ref];
   const imageClass =
-    "w-36 h-36 sm:w-48 sm:h-48 transition-transform duration-500 rounded-4xl bg-white";
+    "w-36 h-36 sm:w-48 sm:h-48 transition-transform duration-500 rounded-4xl object-contain";
 
   return (
     <section className="mt-12">
       <div className="flex h-1/5">
         <img
           src="../../src/assets/images/hand-2.png"
-          className="mr-0 ml-auto -translate-x-[15px] xs:-translate-x-[60px] w-1/2"
+          className="mr-0 ml-auto -translate-x-[15px] xs:-translate-x-[60px] w-1/2 "
         ></img>
         <img
           src="../../src/assets/images/hand.png"
@@ -22,8 +22,7 @@ function Hero() {
         ></img>
       </div>
       <h1 className="font-bold text-5xl md:text-7xl text-left">
-        The Revolution. <br /> Experience the Future of Prosthetics
-        with Robotica.
+        The Revolution. <br /> Experience the Future of Prosthetics.
       </h1>
       <div>
         <p className=" text-secondary text-left max-w-[540px] text-xl my-10">
@@ -40,13 +39,14 @@ function Hero() {
             TWO
           </button>
         </div>
-        <div className="flex flex-wrap justify-center lg:justify-between items-end px-4 gap-14 mt-16 sm:mt-32">
+        <div className="flex flex-wrap justify-center lg:justify-between items-end px-4 gap-14 mt-16 sm:mt-32  max-w-screen-xl">
           <img
             ref={img1ref}
             className={imageClass}
             onMouseEnter={() => {
               focusImage(img1ref);
             }}
+            src="../../src/assets/images/square-1.png"
           ></img>
           <img
             ref={img2ref}

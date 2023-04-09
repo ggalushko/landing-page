@@ -13,7 +13,9 @@ function Header() {
           src="../../src/assets/images/logo.png"
           className="w-20 rounded-md bg-contain bg-center"
         ></img>
-        <p className=" text-3xl pb-1 font-semibold tracking-wider">Robotica</p>
+        <p className=" text-xl md:text-3xl pb-1 font-semibold tracking-wider">
+          Robotica
+        </p>
       </div>
       {!hasSmallScreen ? (
         <nav className="text-link flex gap-6 items-center">

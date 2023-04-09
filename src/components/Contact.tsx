@@ -31,7 +31,7 @@ function Contact() {
             className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 mt-2"
           ></input>
         </label>
-        
+
         <label className="flex flex-col gap-1">
           {" "}
           Question

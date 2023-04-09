@@ -1,7 +1,7 @@
 function NavSlider(props: { isOpened: boolean }) {
   return (
     <div
-      className={` transition-transform duration-500 w-1/2 bg-gray-600 h-screen absolute -right-[50%] top-0 opacity-95 ${
+      className={` transition-transform duration-500 w-1/2 bg-gray-600 z-10 h-screen absolute -right-[50%] top-0 opacity-95 ${
         props.isOpened ? " translate-x-[-100%]" : ""
       }`}
     >
