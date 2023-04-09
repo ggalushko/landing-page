@@ -1,0 +1,44 @@
+{
+  "basic": {
+    "name": "Basic",
+    "initialPrice": 1199.99,
+    "description": "Affordable and Reliable",
+    "includedOptions": ["Basic robotic prosthetic limb"],
+    "extraOptions": [{ "name": "One-year warranty", "price": 110.99 }]
+  },
+  "advanced": {
+    "name": "Advanced",
+    "initialPrice": 3199.99,
+    "description": "Affordable and Reliable",
+    "includedOptions": [
+      "Advanced robotic prosthetic limb",
+      "Free maintenance and repairs for the first year"
+    ],
+    "extraOptions": [
+      {
+        "name": "AI modules for greater control and precision",
+        "price": 310.99
+      },
+      {
+        "name": "Two-year warranty",
+        "price": 169.99
+      }
+    ]
+  },
+  "elite": {
+    "name": "Elite",
+    "initialPrice": 9999.99,
+    "description": "The Ultimate Prosthetic Experience",
+    "includedOptions": [
+      "Elite robotic prosthetic limb with advanced AI modules",
+      "Advanced control and functionality",
+      "Free maintenance and repairs for the first two years"
+    ],
+    "extraOptions": [
+      {
+        "name": "Dedicated customer support for the life of the prosthetic",
+        "price": 999.99
+      }
+    ]
+  }
+}

@@ -4,16 +4,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        "secondary": "#BBBBBB",
-        "link": "#A2C3F9",
-        "button": "rgba(100, 157, 249, 0.4)",
-        "shadowed": "#767676",
-        "dark": "#323232",
-        "modal": "rgba(0, 0, 0, 0.5)"
+        secondary: "#BBBBBB",
+        link: "#A2C3F9",
+        button: "#5491f5",
+        shadowed: "#767676",
+        dark: "#323232",
+        modal: "rgba(0, 0, 0, 0.5)",
       },
-       borderRadius: {
-        "4xl" : "32px"
-       }
+      borderRadius: {
+        "4xl": "32px",
+      },
+      screens: {
+        xs: "450px",
+      },
+      backgroundImage: {
+        plus: "url(assets/images/plus.svg)",
+        checkGreen: "url(assets/images/check-green.svg)",
+        checkBlue: "url(assets/images/check-blue.svg)",
+      },
     },
   },
   plugins: [],

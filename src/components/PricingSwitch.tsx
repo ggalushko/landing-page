@@ -1,8 +1,9 @@
 import { useState } from "react";
-
-function PricingSwitch() {
-  const [sliderPosition, setSliderPosition] = useState<1 | 2 | 3>(1);
-
+type props = {
+  sliderPosition: 1 | 2 | 3;
+  setSliderPosition: React.Dispatch<React.SetStateAction<1 | 2 | 3>>;
+};
+function PricingSwitch({ sliderPosition, setSliderPosition }: props) {
   return (
     <div
       className={` w-72 py-3 flex gap-6  bg-white text-black rounded-3xl justify-center relative
