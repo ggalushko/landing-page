@@ -19,11 +19,11 @@ function Testimonial() {
 
   return (
     <section className="mt-16 sm:mt-48 flex flex-col items-center gap-16">
-      <div className="flex gap-2 justify-center items-center">
+      <div className="flex gap-2 justify-center items-center h-32">
         <img
           src="../../src/assets/images/face-1.png"
           ref={img1ref}
-          className="w-16 h-16 rounded-full transition-all duration-1000"
+          className="w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50"
           onClick={() => {
             focusUserImage(img1ref);
             showFeedback(feedbacks.first);
@@ -32,7 +32,7 @@ function Testimonial() {
         <img
           ref={img2ref}
           src="../../src/assets/images/face-2.png"
-          className="w-32 h-32 rounded-full transition-all duration-1000"
+          className="w-32 h-32 rounded-full transition-all duration-1000 cursor-pointer"
           onClick={() => {
             showFeedback(feedbacks.second);
             focusUserImage(img2ref);
@@ -41,7 +41,7 @@ function Testimonial() {
         <img
           ref={img3ref}
           src="../../src/assets/images/face-3.png"
-          className="w-16 h-16 rounded-full transition-all duration-1000"
+          className="w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50"
           onClick={() => {
             showFeedback(feedbacks.third);
             focusUserImage(img3ref);
@@ -61,9 +61,10 @@ function Testimonial() {
   );
 
   function focusUserImage(newFocusedImg: React.RefObject<HTMLImageElement>) {
+    if (newFocusedImg == focusedImage) return;
     focusedImage.current?.classList.remove("w-32", "h-32");
-    focusedImage.current?.classList.add("w-16", "h-16");
-    newFocusedImg.current?.classList.remove("w-16", "h-16");
+    focusedImage.current?.classList.add("w-16", "h-16", "opacity-50");
+    newFocusedImg.current?.classList.remove("w-16", "h-16", "opacity-50");
     newFocusedImg.current?.classList.add("w-32", "h-32");
 
     switch (focusedImage) {
