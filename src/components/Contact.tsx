@@ -14,7 +14,6 @@ function Contact() {
       </div>
       <form className=" bg-dark p-4 lg:p-8 rounded-xl flex flex-col md:w-[48%] text-xl gap-4 mt-10 md:mt-0 max-w-[500px]">
         <label className="flex flex-col gap-1 ">
-          {" "}
           Name
           <input
             type="text"
@@ -23,8 +22,7 @@ function Contact() {
           ></input>
         </label>
         <label className="flex flex-col gap-1">
-          {" "}
-          Email
+          Phone
           <input
             type="tel"
             placeholder="Enter phone number"
@@ -33,7 +31,6 @@ function Contact() {
         </label>
 
         <label className="flex flex-col gap-1">
-          {" "}
           Question
           <textarea
             placeholder="Enter question"

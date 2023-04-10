@@ -27,7 +27,7 @@ function Footer() {
           </button>
         </div>
       </div>
-      <p className=" text-base text-shadowed text-center mt-5">
+      <p className=" text-base text-shadowed text-center mt-10  ">
         {" "}
         2077. All rights reserved. <br />
         Robotica LTC, Japan, Tokyo, Kagaku-teki 1234

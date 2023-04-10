@@ -46,9 +46,10 @@ function Hero() {
             onMouseEnter={() => {
               focusImage(img1ref);
             }}
-            src="../../src/assets/images/square-1.png"
+            src="../../src/assets/images/hero-1.png"
           ></img>
           <img
+            src="../../src/assets/images/hero-2.png"
             ref={img2ref}
             className={imageClass}
             onMouseEnter={() => {
@@ -56,6 +57,7 @@ function Hero() {
             }}
           ></img>
           <img
+            src="../../src/assets/images/hero-3.png"
             ref={img3ref}
             className={imageClass}
             onMouseEnter={() => {
@@ -63,6 +65,7 @@ function Hero() {
             }}
           ></img>
           <img
+            src="../../src/assets/images/hero-4.png"
             ref={img4ref}
             className={imageClass}
             onMouseEnter={() => {

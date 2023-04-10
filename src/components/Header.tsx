@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import BurgerMenu from "./BurgerMenu";
-import { open } from "../store/modalSlice";
+import { openModal } from "../store/modalSlice";
 
 function Header() {
   const hasSmallScreen = window.innerWidth < 900;
@@ -30,7 +30,7 @@ function Header() {
         <button
           className="w-36 p-2 bg-button text-link rounded-md my-3"
           onClick={() => {
-            dispatch(open());
+            dispatch(openModal());
           }}
         >
           Button text
