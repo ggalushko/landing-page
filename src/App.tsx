@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import CallToAction from "./components/CallToAction";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -7,9 +6,9 @@ import Hero from "./components/Hero";
 import ModalPurchase from "./components/ModalPurchase";
 import Pricing from "./components/Pricing";
 import PricingMobile from "./components/PricingMobile";
+import Quote from "./components/Quote";
 import Showcase from "./components/Showcase";
 import Testimonial from "./components/Testimonial";
-import { Provider } from "react-redux";
 
 function App() {
   return (
@@ -19,10 +18,11 @@ function App() {
       <CallToAction />
       <Testimonial />
       <Showcase />
+      <Quote />
       {window.innerWidth > 1024 ? <Pricing /> : <PricingMobile />}
       <Contact />
       <Footer />
-      {/* <ModalPurchase /> */}
+      <ModalPurchase />
     </>
   );
 }

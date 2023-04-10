@@ -5,19 +5,25 @@ const modalSlice = createSlice({
   initialState: {
     isOpened: false,
     hideClass: "opacity-0 pointer-events-none",
+    chosenPackage: "",
+    chosenPrice: 0,
   },
   reducers: {
-    close(state) {
+    closeModal(state) {
       state.isOpened = false;
-      console.log(state.isOpened)
-
     },
-    open(state) {
+    openModal(state) {
       state.isOpened = true;
-      console.log(state.isOpened)
+    },
+    setPrice(state, action) {
+      state.chosenPrice = action.payload.price;
+    },
+    setPackage(state, action) {
+      state.chosenPackage = action.payload.name;
     },
   },
 });
 
-export const { close, open } = modalSlice.actions;
+export const { closeModal, openModal, setPrice, setPackage } =
+  modalSlice.actions;
 export default modalSlice.reducer;
