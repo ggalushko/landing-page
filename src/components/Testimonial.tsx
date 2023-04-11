@@ -18,7 +18,10 @@ function Testimonial() {
   const [focusedImage, setFocusedImage] = useState(img2ref);
 
   return (
-    <section className="mt-16 sm:mt-48 flex flex-col items-center gap-16">
+    <section
+      className="mt-16 sm:mt-48 flex flex-col items-center gap-16"
+      id="feedback"
+    >
       <div className="flex gap-2 justify-center items-center h-32">
         <img
           src="../../src/assets/images/face-1.png"

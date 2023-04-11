@@ -2,7 +2,10 @@ function Quote() {
   return (
     <>
       <figure className="w-full h-1 bg-dark mb-2 sm:mb-6 mt-12"></figure>
-      <section className="flex flex-col sm:flex-row items-center  justify-between sm:gap-[8%]">
+      <section
+        className="flex flex-col sm:flex-row items-center  justify-between sm:gap-[8%]"
+        id="mission"
+      >
         <div className=" w-3/5 md:leading-10">
           <p className="font-semibold text-sm sm:text-base md:text-xl lg:text-3xl">
             As a robot myself, I understand the value and potential of

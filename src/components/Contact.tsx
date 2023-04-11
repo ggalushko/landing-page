@@ -3,7 +3,10 @@ import SocialIcons from "./SocialIcons";
 
 function Contact() {
   return (
-    <div className="mt-40 flex flex-col md:flex-row justify-between lg:justify-center lg:gap-20">
+    <div
+      className="mt-40 flex flex-col md:flex-row justify-between lg:justify-center lg:gap-20"
+      id="contact"
+    >
       <div className="md:w-[40%] flex flex-col gap-14">
         <SectionText
           header="Any questions left?"

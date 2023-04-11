@@ -8,12 +8,12 @@ function ModalPurchase() {
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const modalState = useSelector((state: RootState) => state.modal);
   const dispatch = useDispatch();
-
+  document.body.style.overflow = `${modalState.isOpened ? "hidden" : ""}`;
   return (
     <div
       ref={modalRef}
       className={` w-full h-full fixed top-0 right-0 bg-modal grid place-content-center
-       duration-700 transition-opacity z-50 ${
+       duration-700 transition-opacity z-40 ${
          modalState.isOpened ? "" : modalState.hideClass
        }`}
       onMouseDown={(e) => {
@@ -35,7 +35,9 @@ function ModalPurchase() {
           {modalState.chosenPackage} package
         </p>
         <p className="m-auto  text-xl text-shadowed text-center">
-          {`Your price is $${modalState.chosenPrice}. To complete your purchase, simply fill out the form below and our team will process your order promptly. `}
+          {`Your price is $${modalState.chosenPrice}. 
+          To complete your purchase, fill out the form below and our team will 
+          process your order promptly. `}
         </p>
         <label className="flex flex-col gap-1">
           {" "}

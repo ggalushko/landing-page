@@ -1,10 +1,14 @@
 function CallToAction() {
   return (
-    <section className="bg-dark flex flex-col gap-8 sm:gap-14 rounded-3xl px-10 py-20 mt-20 items-center text-center max-w-screen-xl mx-auto">
+    <section
+      className="bg-dark flex flex-col gap-8 sm:gap-14 rounded-3xl px-2 xs:px-10 py-5 mt-20 
+    items-center text-center max-w-screen-xl mx-auto"
+      id="about"
+    >
       <h2 className="text-4xl sm:text-5xl font-bold">
         Transforming Lives, <br /> One Prosthetic at a Time.
       </h2>
-      <p className=" text-xl text-shadowed md:w-5/6 leading-8">
+      <p className=" xs:text-xl text-shadowed md:w-5/6 xs:leading-8">
         Discover the Comfort and Functionality of Robotic Prosthetics with
         Robotica. Our team of experts is dedicated to creating prosthetic limbs
         that are not only advanced in their technology but are also comfortable

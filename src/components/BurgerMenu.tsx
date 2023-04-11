@@ -7,7 +7,7 @@ function BurgerMenu() {
   return (
     <>
       <BurgerButton isOpened={isOpened} setIsOpened={setIsopened} />
-      <NavSlider isOpened={isOpened} />
+      <NavSlider isOpened={isOpened} setIsOpened={setIsopened} />
     </>
   );
 }

@@ -16,7 +16,7 @@ function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 h-10 mt-10 sm:mt-0">
+        <div className="flex  items-center justify-center gap-3 h-10 mt-10 sm:mt-0">
           <input
             type="email"
             placeholder="Enter email"

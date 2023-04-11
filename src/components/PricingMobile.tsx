@@ -13,7 +13,7 @@ const pricePacks = {
 function PricingMobile() {
   const [sliderPosition, setSliderPosition] = useState<1 | 2 | 3>(1);
   return (
-    <section className="flex flex-col gap-12 items-center mt-20">
+    <section className="flex flex-col gap-12 items-center mt-20" id="pricing">
       <SectionText
         header="Affordable Robotic Prosthetics for Everyone"
         text="We believe that everyone should have access to the latest technology in prosthetics. 

@@ -4,7 +4,7 @@ import pricePackages from "../assets/data/pricePackages.json";
 
 function Pricing() {
   return (
-    <section className="pt-20">
+    <section className="pt-20" id="pricing">
       <SectionText
         header="Affordable Robotic Prosthetics for Everyone"
         text="We believe that everyone should have access to the latest technology in prosthetics. 

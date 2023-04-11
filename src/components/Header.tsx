@@ -1,9 +1,10 @@
 import { useDispatch } from "react-redux";
 import BurgerMenu from "./BurgerMenu";
 import { openModal } from "../store/modalSlice";
+import NavLinks from "./NavLinks";
 
 function Header() {
-  const hasSmallScreen = window.innerWidth < 900;
+  const hasSmallScreen = window.innerWidth < 1024;
   const dispatch = useDispatch();
 
   return (
@@ -19,11 +20,7 @@ function Header() {
       </div>
       {!hasSmallScreen ? (
         <nav className="text-link flex gap-6 items-center">
-          <a href="#">Nav</a>
-          <a href="#">Nav</a>
-          <a href="#">Nav</a>
-          <a href="#">Nav</a>
-          <a href="#">Nav</a>
+          <NavLinks />
         </nav>
       ) : null}
       {!hasSmallScreen && (

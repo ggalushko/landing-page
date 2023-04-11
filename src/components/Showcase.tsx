@@ -3,7 +3,7 @@ import ShowcaseCard from "./ShowcaseCard";
 
 function Showcase() {
   return (
-    <section className="mt-32">
+    <section className="mt-32" id="advantages">
       <SectionText
         header="Experience the Future of Mobility"
         text="Robotica is dedicated to transforming the lives of individuals with our advanced and customizable robotic prosthetics. 
