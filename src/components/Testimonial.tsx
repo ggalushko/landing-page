@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import reviews from "../assets/data/reviews.json";
+import { Fade } from "react-awesome-reveal";
 const feedbacks = reviews;
 
 type feedback = {
@@ -18,49 +19,51 @@ function Testimonial() {
   const [focusedImage, setFocusedImage] = useState(img2ref);
 
   return (
-    <section
-      className="mt-16 sm:mt-48 flex flex-col items-center gap-16"
-      id="feedback"
-    >
-      <div className="flex gap-2 justify-center items-center h-32">
-        <img
-          src="../../src/assets/images/face-1.png"
-          ref={img1ref}
-          className="w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50"
-          onClick={() => {
-            focusUserImage(img1ref);
-            showFeedback(feedbacks.first);
-          }}
-        ></img>
-        <img
-          ref={img2ref}
-          src="../../src/assets/images/face-2.png"
-          className="w-32 h-32 rounded-full transition-all duration-1000 cursor-pointer"
-          onClick={() => {
-            showFeedback(feedbacks.second);
-            focusUserImage(img2ref);
-          }}
-        ></img>
-        <img
-          ref={img3ref}
-          src="../../src/assets/images/face-3.png"
-          className="w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50"
-          onClick={() => {
-            showFeedback(feedbacks.third);
-            focusUserImage(img3ref);
-          }}
-        ></img>
-      </div>
-      <div ref={paragraphRef} className=" transition-opacity duration-700">
-        <p className="text-xl md:text-3xl font-semibold max-w-[820px] text-center">
-          {currentFeedback.text}
-        </p>
-        <div className="flex flex-col mt-4 gap-2 items-center">
-          <p className="text-xl">{currentFeedback.name}</p>
-          <p className="text-secondary">{currentFeedback.link}</p>
+    <Fade delay={700} triggerOnce>
+      <section
+        className="mt-16 sm:mt-48 flex flex-col items-center gap-16"
+        id="feedback"
+      >
+        <div className="flex gap-2 justify-center items-center h-32">
+          <img
+            src="../../src/assets/images/face-1.png"
+            ref={img1ref}
+            className="w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50"
+            onClick={() => {
+              focusUserImage(img1ref);
+              showFeedback(feedbacks.first);
+            }}
+          ></img>
+          <img
+            ref={img2ref}
+            src="../../src/assets/images/face-2.png"
+            className="w-32 h-32 rounded-full transition-all duration-1000 cursor-pointer"
+            onClick={() => {
+              showFeedback(feedbacks.second);
+              focusUserImage(img2ref);
+            }}
+          ></img>
+          <img
+            ref={img3ref}
+            src="../../src/assets/images/face-3.png"
+            className="w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50"
+            onClick={() => {
+              showFeedback(feedbacks.third);
+              focusUserImage(img3ref);
+            }}
+          ></img>
         </div>
-      </div>
-    </section>
+        <div ref={paragraphRef} className=" transition-opacity duration-700">
+          <p className="text-xl md:text-3xl font-semibold max-w-[820px] text-center">
+            {currentFeedback.text}
+          </p>
+          <div className="flex flex-col mt-4 gap-2 items-center">
+            <p className="text-xl">{currentFeedback.name}</p>
+            <p className="text-secondary">{currentFeedback.link}</p>
+          </div>
+        </div>
+      </section>
+    </Fade>
   );
 
   function focusUserImage(newFocusedImg: React.RefObject<HTMLImageElement>) {

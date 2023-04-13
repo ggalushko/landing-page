@@ -1,3 +1,5 @@
+import { Slide,  Fade } from "react-awesome-reveal";
+
 function Quote() {
   return (
     <>
@@ -6,20 +8,25 @@ function Quote() {
         className="flex flex-col sm:flex-row items-center  justify-between sm:gap-[8%]"
         id="mission"
       >
-        <div className=" w-3/5 md:leading-10">
-          <p className="font-semibold text-sm sm:text-base md:text-xl lg:text-3xl">
-            As a robot myself, I understand the value and potential of
-            technology, and I am committed to leading our team in creating
-            innovative solutions that are accessible and affordable for everyone
-          </p>
-          <p className="font-semibold text-sm md:text-base text-shadowed mt-3 md:mt-7">
-            Aizek Roboterri, CEO of Robotica
-          </p>
-        </div>
-        <img
-          src="../../src/assets/images/robot.png"
-          className="w-2/5 mt-5"
-        ></img>
+        <Slide duration={2000} delay={1000} triggerOnce>
+          <div className=" w-3/5 md:leading-10">
+            <p className="font-semibold text-sm sm:text-base md:text-xl lg:text-3xl">
+              As a robot myself, I understand the value and potential of
+              technology, and I am committed to leading our team in creating
+              innovative solutions that are accessible and affordable for
+              everyone
+            </p>
+            <p className="font-semibold text-sm md:text-base text-shadowed mt-3 md:mt-7">
+              Aizek Roboterri, CEO of Robotica
+            </p>
+          </div>
+        </Slide>
+        <Fade className="w-2/5" delay={1000} triggerOnce>
+          <img
+            src="../../src/assets/images/robot.png"
+            className="w-full mt-5"
+          ></img>
+        </Fade>
       </section>
       <figure className="w-full h-1 bg-dark"></figure>
     </>

@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Fade, Zoom, Slide } from "react-awesome-reveal";
 
 function Hero() {
   const img1ref = useRef<HTMLImageElement>(null);
@@ -10,27 +11,48 @@ function Hero() {
     "w-36 h-36 sm:w-48 sm:h-48 transition-transform duration-500 rounded-4xl object-contain";
 
   return (
-    <section className="mt-12">
-      <div className="flex h-1/5">
-        <img
-          src="../../src/assets/images/hand-2.png"
-          className="mr-0 ml-auto -translate-x-[15px] xs:-translate-x-[60px] w-1/2 "
-        ></img>
-        <img
-          src="../../src/assets/images/hand.png"
-          className="mr-0 ml-auto translate-x-[15px] xs:translate-x-[50px] w-1/2"
-        ></img>
-      </div>
+    <section className="my-12 mb-20">
+      <Fade duration={2000} triggerOnce>
+        <div className="flex h-1/5">
+          <Slide duration={3000} className="w-1/2" triggerOnce>
+            <img
+              src="../../src/assets/images/hand-2.png"
+              className="-translate-x-[15px] xs:-translate-x-[60px] "
+            ></img>
+          </Slide>
+          <Slide
+            duration={3000}
+            className="w-1/2 "
+            direction="right"
+            triggerOnce
+          >
+            <img
+              src="../../src/assets/images/hand.png"
+              className=" translate-x-[15px] xs:translate-x-[50px] ml-0 mr-auto w-full"
+            ></img>
+          </Slide>
+        </div>
+      </Fade>
+
       <h1 className="font-bold text-5xl md:text-7xl text-left">
-        The Revolution. <br /> Experience the Future of Prosthetics.
+        The{" "}
+        <Fade cascade duration={1000} damping={0.2} triggerOnce>
+          Revolution.
+        </Fade>{" "}
+        <br />
+        <Slide duration={2000} triggerOnce fraction={1}>
+          Experience the Future of Prosthetics.
+        </Slide>
       </h1>
-      <div>
+
+      <Fade duration={1500} cascade triggerOnce fraction={1}>
         <p className=" text-secondary text-left max-w-[540px] text-xl my-10">
           Welcome to Robotica, where we are committed to providing cutting-edge
           robotic prosthetics that are designed to improve the mobility and
           independence of our customers.
         </p>
-        <div className="sm:ml-0 sm:mr-auto w-fit flex gap-6 flex-col sm:flex-row">
+
+        <div className="sm:ml-0 sm:mr-auto w-fit flex gap-6 flex-col sm:flex-row mb-16 sm:mb-32 ">
           <button className="w-60 bg-button text-link rounded-md py-1 block">
             {" "}
             ONE
@@ -39,7 +61,8 @@ function Hero() {
             TWO
           </button>
         </div>
-        <div className="flex flex-wrap justify-center lg:justify-between items-end px-4 gap-14 mt-16 sm:mt-32  max-w-screen-xl">
+      </Fade>
+        <div className="flex flex-wrap justify-center lg:justify-between items-end px-4 gap-14  max-w-screen-xl">
           <img
             ref={img1ref}
             className={imageClass}
@@ -73,7 +96,7 @@ function Hero() {
             }}
           ></img>
         </div>
-      </div>
+
     </section>
   );
   function focusImage(imgRef: React.RefObject<HTMLImageElement>) {

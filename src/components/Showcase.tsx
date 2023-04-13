@@ -1,15 +1,19 @@
+import { Slide, Zoom } from "react-awesome-reveal";
 import SectionText from "./SectionText";
 import ShowcaseCard from "./ShowcaseCard";
 
 function Showcase() {
   return (
     <section className="mt-32" id="advantages">
+      <Slide duration={1500} delay={1000} triggerOnce>
       <SectionText
         header="Experience the Future of Mobility"
         text="Robotica is dedicated to transforming the lives of individuals with our advanced and customizable robotic prosthetics. 
         With our commitment to quality and innovation, we have become a trusted leader in the industry"
       />
+      </Slide>
       <div className="flex gap-10 flex-wrap justify-center mt-12 sm:mt-24">
+        <Zoom duration={1500} delay={700} cascade triggerOnce>
         <ShowcaseCard
           imgSrc="../../src/assets/images/factory.jpg"
           imgCaption="Factories in Tokyo"
@@ -35,6 +39,7 @@ function Showcase() {
           From the size and shape of the limb to the level of functionality and control, we can tailor our products to match your
            specific requirements. "
         />
+        </Zoom>
       </div>
       <button className="w-36 p-2 bg-button text-link rounded-md mt-14 block mx-auto">
         Button text
