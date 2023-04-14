@@ -1,14 +1,10 @@
-import { useRef } from "react";
-import { Fade, Zoom, Slide } from "react-awesome-reveal";
+import { useState } from "react";
+import { Fade, Slide } from "react-awesome-reveal";
 
 function Hero() {
-  const img1ref = useRef<HTMLImageElement>(null);
-  const img2ref = useRef<HTMLImageElement>(null);
-  const img3ref = useRef<HTMLImageElement>(null);
-  const img4ref = useRef<HTMLImageElement>(null);
-  const imgs = [img1ref, img2ref, img3ref, img4ref];
   const imageClass =
     "w-36 h-36 sm:w-48 sm:h-48 transition-transform duration-500 rounded-4xl object-contain";
+  const [focusedImage, setFocusedImage] = useState(0);
 
   return (
     <section className="my-12 mb-20">
@@ -70,47 +66,36 @@ function Hero() {
       </Fade>
       <div className="flex flex-wrap justify-center lg:justify-between items-end px-4 gap-14  max-w-screen-xl">
         <img
-          ref={img1ref}
-          className={imageClass}
+          className={imageClass + `${focusedImage == 1 ? " scale-150" : ""}`}
           onMouseEnter={() => {
-            focusImage(img1ref);
+            setFocusedImage(1);
           }}
           src="../../src/assets/images/hero-1.png"
         ></img>
         <img
           src="../../src/assets/images/hero-2.png"
-          ref={img2ref}
-          className={imageClass}
+          className={imageClass + `${focusedImage == 2 ? " scale-150" : ""}`}
           onMouseEnter={() => {
-            focusImage(img2ref);
+            setFocusedImage(2);
           }}
         ></img>
         <img
           src="../../src/assets/images/hero-3.png"
-          ref={img3ref}
-          className={imageClass}
+          className={imageClass + `${focusedImage == 3 ? " scale-150" : ""}`}
           onMouseEnter={() => {
-            focusImage(img3ref);
+            setFocusedImage(3);
           }}
         ></img>
         <img
           src="../../src/assets/images/hero-4.png"
-          ref={img4ref}
-          className={imageClass}
+          className={imageClass + `${focusedImage == 4 ? " scale-150" : ""}`}
           onMouseEnter={() => {
-            focusImage(img4ref);
+            setFocusedImage(4);
           }}
         ></img>
       </div>
     </section>
   );
-  function focusImage(imgRef: React.RefObject<HTMLImageElement>) {
-    imgRef.current!.classList.add("scale-150");
-    imgs.forEach((img) => {
-      if (img.current !== imgRef.current)
-        img!.current!.classList.remove("scale-150");
-    });
-  }
 }
 
 export default Hero;
