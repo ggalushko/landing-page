@@ -1,4 +1,5 @@
 import { Fade } from "react-awesome-reveal";
+import ActionButton from "./ActionButton";
 
 function CallToAction() {
   return (
@@ -23,9 +24,7 @@ function CallToAction() {
           the future of prosthetics and take the first step towards transforming
           your life today
         </p>
-        <button className="w-36 p-2 bg-button text-link rounded-md my-3">
-          Button text
-        </button>
+        <ActionButton text="Experience"/>
       </section>
     </Fade>
   );

@@ -1,6 +1,3 @@
-import React from "react";
-import SocialIcons from "./SocialIcons";
-
 function Footer() {
   return (
     <footer className="py-14">
@@ -16,23 +13,23 @@ function Footer() {
           </p>
         </div>
 
+        <p className=" text-base text-shadowed text-center mx-3">
+          2077. All rights reserved. <br />
+          Robotica LTC, Japan, Tokyo, Kagaku-teki 1234
+          <br />+ 1 (2345) 1932 020
+        </p>
+
         <div className="flex  items-center justify-center gap-3 h-10 mt-10 sm:mt-0">
           <input
             type="email"
             placeholder="Enter email"
             className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60"
           ></input>
-          <button className="w-24 p-2 bg-button text-link rounded-md block">
+          <button className="max-w-24 p-2 bg-button font-semibold rounded-md block hover:scale-105 transition-transform duration-500">
             Subscribe
           </button>
         </div>
       </div>
-      <p className=" text-base text-shadowed text-center mt-10  ">
-        {" "}
-        2077. All rights reserved. <br />
-        Robotica LTC, Japan, Tokyo, Kagaku-teki 1234
-        <br />+ 1 (2345) 1932 020
-      </p>
     </footer>
   );
 }

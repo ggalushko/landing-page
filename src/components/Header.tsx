@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import BurgerMenu from "./BurgerMenu";
 import { openModal } from "../store/modalSlice";
 import NavLinks from "./NavLinks";
+import ActionButton from "./ActionButton";
 
 function Header() {
   const hasSmallScreen = window.innerWidth < 1024;
@@ -19,21 +20,11 @@ function Header() {
         </p>
       </div>
       {!hasSmallScreen ? (
-        <nav className="text-link flex gap-6 items-center">
+        <nav className="text-link text-xl flex gap-7 items-center">
           <NavLinks />
         </nav>
       ) : null}
-      {!hasSmallScreen && (
-        <button
-          className="w-36 p-2 bg-button text-link rounded-md my-3"
-          onClick={() => {
-            dispatch(openModal());
-          }}
-        >
-          Button text
-        </button>
-      )}
-      {hasSmallScreen && <BurgerMenu />}
+      {hasSmallScreen ? <BurgerMenu /> : <ActionButton text="Discover"/>}
     </header>
   );
 }

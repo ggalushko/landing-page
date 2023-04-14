@@ -52,51 +52,56 @@ function Hero() {
           independence of our customers.
         </p>
 
-        <div className="sm:ml-0 sm:mr-auto w-fit flex gap-6 flex-col sm:flex-row mb-16 sm:mb-32 ">
-          <button className="w-60 bg-button text-link rounded-md py-1 block">
-            {" "}
-            ONE
-          </button>
-          <button className="w-60 bg-transparent rounded-md py-1 border border-secondary block">
-            TWO
-          </button>
+        <div className="sm:ml-0 sm:mr-auto w-fit flex gap-6 flex-col sm:flex-row mb-16 sm:mb-32 text-xl font-semibold">
+          <a href="#pricing">
+            <button className="w-60 bg-button v rounded-md py-[9.25px] block hover:scale-105 transition-transform duration-500">
+              Pricing
+            </button>
+          </a>
+          <a href="#contact">
+            <button
+              className="w-60 bg-transparent rounded-md py-2 border border-secondary block 
+            hover:scale-105 transition-transform duration-500"
+            >
+              More information
+            </button>
+          </a>
         </div>
       </Fade>
-        <div className="flex flex-wrap justify-center lg:justify-between items-end px-4 gap-14  max-w-screen-xl">
-          <img
-            ref={img1ref}
-            className={imageClass}
-            onMouseEnter={() => {
-              focusImage(img1ref);
-            }}
-            src="../../src/assets/images/hero-1.png"
-          ></img>
-          <img
-            src="../../src/assets/images/hero-2.png"
-            ref={img2ref}
-            className={imageClass}
-            onMouseEnter={() => {
-              focusImage(img2ref);
-            }}
-          ></img>
-          <img
-            src="../../src/assets/images/hero-3.png"
-            ref={img3ref}
-            className={imageClass}
-            onMouseEnter={() => {
-              focusImage(img3ref);
-            }}
-          ></img>
-          <img
-            src="../../src/assets/images/hero-4.png"
-            ref={img4ref}
-            className={imageClass}
-            onMouseEnter={() => {
-              focusImage(img4ref);
-            }}
-          ></img>
-        </div>
-
+      <div className="flex flex-wrap justify-center lg:justify-between items-end px-4 gap-14  max-w-screen-xl">
+        <img
+          ref={img1ref}
+          className={imageClass}
+          onMouseEnter={() => {
+            focusImage(img1ref);
+          }}
+          src="../../src/assets/images/hero-1.png"
+        ></img>
+        <img
+          src="../../src/assets/images/hero-2.png"
+          ref={img2ref}
+          className={imageClass}
+          onMouseEnter={() => {
+            focusImage(img2ref);
+          }}
+        ></img>
+        <img
+          src="../../src/assets/images/hero-3.png"
+          ref={img3ref}
+          className={imageClass}
+          onMouseEnter={() => {
+            focusImage(img3ref);
+          }}
+        ></img>
+        <img
+          src="../../src/assets/images/hero-4.png"
+          ref={img4ref}
+          className={imageClass}
+          onMouseEnter={() => {
+            focusImage(img4ref);
+          }}
+        ></img>
+      </div>
     </section>
   );
   function focusImage(imgRef: React.RefObject<HTMLImageElement>) {

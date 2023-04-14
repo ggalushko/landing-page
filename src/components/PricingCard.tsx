@@ -51,7 +51,7 @@ function PricingCard({ pack }: pack) {
         </>
         <p className="mt-auto mb-0 text-xl">Total: {`$ ${totalPrice}`}</p>
         <button
-          className=" w-full bg-blue-600 py-2 rounded-lg text-white mt-3 mb-0 block"
+          className=" w-full bg-blue-600 py-2 rounded-lg text-white mt-3 mb-0 block hover:opacity-80 transition-opacity duration-500"
           onClick={(e) => {
             e.preventDefault();
             dispatch(setPrice({ price: totalPrice }));

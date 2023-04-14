@@ -1,12 +1,25 @@
 function NavLinks() {
+  const className = "hover:opacity-60 transition-opacity";
   return (
     <>
-      <a href="#about">About</a>
-      <a href="#feedback">Feedback</a>
-      <a href="#advantages">Advantages</a>
-      <a href="#mission">Mission</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" className={className}>
+        About
+      </a>
+      <a href="#feedback" className={className}>
+        Feedback
+      </a>
+      <a href="#advantages" className={className}>
+        Advantages
+      </a>
+      <a href="#mission" className={className}>
+        Mission
+      </a>
+      <a href="#pricing" className={className}>
+        Pricing
+      </a>
+      <a href="#contact" className={className}>
+        Contact
+      </a>
     </>
   );
 }

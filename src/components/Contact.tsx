@@ -1,4 +1,4 @@
-import { JackInTheBox, Slide } from "react-awesome-reveal";
+import { JackInTheBox, Slide, Fade } from "react-awesome-reveal";
 import SectionText from "./SectionText";
 import SocialIcons from "./SocialIcons";
 
@@ -16,11 +16,16 @@ function Contact() {
           all your questions and provide any information you need. Fill the form, and we will call you back"
           />
         </Slide>
-        <Slide direction="up" delay={1000} triggerOnce >
+        <Fade delay={1000} triggerOnce>
           <SocialIcons />
-        </Slide>
+        </Fade>
       </div>
-      <JackInTheBox triggerOnce delay={1000} duration={1500} className="md:w-[48%] max-w-[500px] mt-10">
+      <JackInTheBox
+        triggerOnce
+        delay={1000}
+        duration={1500}
+        className="md:w-[48%] max-w-[500px] mt-10"
+      >
         <form className=" bg-dark p-4 lg:p-8 rounded-xl flex flex-col text-xl gap-4 mt-10 md:mt-0 ">
           <label className="flex flex-col gap-1 ">
             Name
@@ -47,7 +52,10 @@ function Contact() {
              resize-none"
             ></textarea>
           </label>
-          <button className="w-36 p-2 bg-button text-link rounded-md mt-3 block m-auto">
+          <button
+            className="w-36 p-2 bg-button font-semibold rounded-md mt-3 block m-auto 
+          hover:scale-105 transition-transform duration-500"
+          >
             Submit
           </button>
         </form>

@@ -8,8 +8,8 @@ function Quote() {
         className="flex flex-col sm:flex-row items-center  justify-between sm:gap-[8%]"
         id="mission"
       >
-        <Slide duration={2000} delay={1000} triggerOnce>
-          <div className=" w-3/5 md:leading-10">
+        <Slide duration={2000} delay={1000} triggerOnce className=" w-3/5">
+          <div className="md:leading-10">
             <p className="font-semibold text-sm sm:text-base md:text-xl lg:text-3xl">
               As a robot myself, I understand the value and potential of
               technology, and I am committed to leading our team in creating
