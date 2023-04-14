@@ -26,7 +26,7 @@ function PricingCheckbox({
           checked={inputRefChecked}
           type="checkbox"
           className="ml-0 mr-4 w-8 h-8 appearance-none relative checked:bg-checkBlue shrink-0 bg-plus bg-contain bg-center
-          before:absolute before:top-0 before:right-0 before:w-8 before:h-8  before:rounded-md before:transition-colors
+          before:absolute before:top-0 before:right-0 before:w-8 before:h-8 before:rounded-md before:transition-colors cursor-pointer
          "
           onChange={() => {
             inputRef.current?.checked

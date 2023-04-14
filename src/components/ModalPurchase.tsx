@@ -9,6 +9,8 @@ function ModalPurchase() {
   const modalState = useSelector((state: RootState) => state.modal);
   const dispatch = useDispatch();
   document.body.style.overflow = `${modalState.isOpened ? "hidden" : ""}`;
+  const inputClass =
+    "px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 mt-2 focus:outline-none";
   return (
     <div
       ref={modalRef}
@@ -23,7 +25,7 @@ function ModalPurchase() {
         isTargetArea && dispatch(closeModal());
       }}
     >
-      <form className=" bg-dark p-8 rounded-xl flex flex-col text-xl gap-4 relative xs:w-[450px]">
+      <form className=" bg-dark p-8 rounded-xl flex flex-col text-xl gap-7 relative xs:w-[450px]">
         <button
           ref={closeBtnRef}
           className="right-0 top-0 absolute -translate-y-[100%] sm:translate-x-[100%]"
@@ -34,37 +36,34 @@ function ModalPurchase() {
         <p className="m-auto text-4xl font-bold text-center">
           {modalState.chosenPackage} package
         </p>
-        <p className="m-auto  text-xl text-shadowed text-center">
+        <p className="m-auto  text-xl text-shadowed text-center mb-5">
           {`Your price is $${modalState.chosenPrice}. 
           To complete your purchase, fill out the form below and our team will 
           process your order promptly. `}
         </p>
         <label className="flex flex-col gap-1">
-          {" "}
           Name
           <input
             type="text"
             placeholder="Enter name"
-            className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 mt-2"
+            className={inputClass}
           ></input>
         </label>
         <label className="flex flex-col gap-1">
-          {" "}
           Email
           <input
             type="email"
             placeholder="Enter email"
-            className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 mt-2"
+            className={inputClass}
           ></input>
         </label>
 
         <label className="flex flex-col gap-1">
-          {" "}
           Phone number
           <input
             type="tel"
             placeholder="Enter phone"
-            className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 mt-2"
+            className={inputClass}
           ></input>
         </label>
         <button

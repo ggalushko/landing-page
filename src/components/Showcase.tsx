@@ -5,7 +5,7 @@ import ActionButton from "./ActionButton";
 
 function Showcase() {
   return (
-    <section className="mt-32 flex flex-col items-center" id="advantages">
+    <section className="mt-32" id="advantages">
       <Slide duration={1500} delay={1000} triggerOnce>
         <SectionText
           header="Experience the Future of Mobility"
@@ -42,7 +42,9 @@ function Showcase() {
           />
         </Zoom>
       </div>
-      <ActionButton text="Checkout"/>
+      <div className="mx-auto w-fit">
+        <ActionButton text="Checkout" />
+      </div>
     </section>
   );
 }

@@ -5,7 +5,7 @@ import NavLinks from "./NavLinks";
 import ActionButton from "./ActionButton";
 
 function Header() {
-  const hasSmallScreen = window.innerWidth < 1024;
+  const hasSmallScreen = window.innerWidth < 1090;
   const dispatch = useDispatch();
 
   return (

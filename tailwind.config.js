@@ -5,8 +5,8 @@ export default {
     extend: {
       colors: {
         secondary: "#BBBBBB",
-        link: "#A2C3F9",
-        button: "#5491f5",
+        link: "#2DABFF",
+        button: "#0090FF",
         shadowed: "#767676",
         dark: "#323232",
         modal: "rgba(0, 0, 0, 0.5)",
@@ -22,6 +22,7 @@ export default {
         checkGreen: "url(assets/images/check-green.svg)",
         checkBlue: "url(assets/images/check-blue.svg)",
       },
+
     },
   },
   plugins: [],

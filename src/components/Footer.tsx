@@ -23,9 +23,10 @@ function Footer() {
           <input
             type="email"
             placeholder="Enter email"
-            className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60"
+            className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 focus:outline-none"
           ></input>
-          <button className="max-w-24 p-2 bg-button font-semibold rounded-md block hover:scale-105 transition-transform duration-500">
+          <button className="max-w-24 p-2 bg-button font-semibold rounded-md block 
+          hover:scale-105 transition-transform duration-500 ">
             Subscribe
           </button>
         </div>

@@ -32,7 +32,7 @@ function Contact() {
             <input
               type="text"
               placeholder="Enter name"
-              className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 mt-2"
+              className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 mt-2 focus:outline-none"
             ></input>
           </label>
           <label className="flex flex-col gap-1">
@@ -40,7 +40,7 @@ function Contact() {
             <input
               type="tel"
               placeholder="Enter phone number"
-              className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 mt-2"
+              className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 mt-2 focus:outline-none"
             ></input>
           </label>
 
@@ -49,7 +49,7 @@ function Contact() {
             <textarea
               placeholder="Enter question"
               className="px-3 py-2 text- rounded-lg bg-transparent border border-secondary border-opacity-60 mt-2 h-36
-             resize-none"
+             resize-none focus:outline-none"
             ></textarea>
           </label>
           <button
