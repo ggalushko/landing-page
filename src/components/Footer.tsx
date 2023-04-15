@@ -20,13 +20,18 @@ function Footer() {
         </p>
 
         <div className="flex  items-center justify-center gap-3 h-10 mt-10 sm:mt-0">
-          <input
-            type="email"
-            placeholder="Enter email"
-            className="px-3 py-2 rounded-lg bg-transparent border border-secondary border-opacity-60 focus:outline-none"
-          ></input>
-          <button className="max-w-24 p-2 bg-button font-semibold rounded-md block 
-          hover:scale-105 transition-transform duration-500 ">
+          <div className="flex items-center border border-secondary border-opacity-60 h-10 rounded-md">
+            <div className=" bg-mail w-7 h-5 bg-center bg-contain bg-no-repeat ml-1"></div>
+            <input
+              type="email"
+              placeholder="Enter email"
+              className="px-3 py-2 rounded-lg bg-transparent focus:outline-none"
+            />
+          </div>
+          <button
+            className="max-w-24 p-2 bg-button font-semibold block rounded-md
+          hover:scale-105 transition-transform duration-500 "
+          >
             Subscribe
           </button>
         </div>
