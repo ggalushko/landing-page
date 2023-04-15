@@ -23,7 +23,6 @@ function PricingMobile() {
         sliderPosition={sliderPosition}
         setSliderPosition={setSliderPosition}
       />
-
       <PricingCard pack={pricePacks[sliderPosition]} />
     </section>
   );
