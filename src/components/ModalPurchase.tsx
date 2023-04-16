@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../store/modalSlice";
 import { RootState } from "../store/store";
+import { hideAlert, showAlert } from "../store/alertSlice";
 
 function ModalPurchase() {
   const modalRef = useRef<HTMLDivElement | null>(null);
@@ -25,7 +26,7 @@ function ModalPurchase() {
     inputsValidity.name && inputsValidity.phone && inputsValidity.email;
   const inputClass =
     "px-3 py-2 rounded-lg bg-transparent border-opacity-60 focus:outline-none";
-    const labelClass = "flex flex-col gap-1"
+  const labelClass = "flex flex-col gap-1";
   document.body.style.overflow = `${modalState.isOpened ? "hidden" : ""}`;
 
   return (
@@ -75,7 +76,7 @@ function ModalPurchase() {
             }`}
             value={inputValues.name}
             onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
-              if (e.target.value.match(/^([a-z|\s])*$/i))
+              if (e.target.value.match(/^([a-z|а-я|\s])*$/i))
                 setInputValues({ ...inputValues, name: e.target.value });
             }}
           />
@@ -135,6 +136,10 @@ function ModalPurchase() {
           onClick={(e) => {
             e.preventDefault();
             dispatch(closeModal());
+            dispatch(showAlert())
+               setTimeout(() => {
+                dispatch(hideAlert())
+               }, 3000);
             clearInputs();
           }}
         >

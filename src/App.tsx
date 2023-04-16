@@ -1,3 +1,4 @@
+import Alert from "./components/Alert";
 import CallToAction from "./components/CallToAction";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -23,6 +24,7 @@ function App() {
       <Contact />
       <Footer />
       <ModalPurchase />
+      <Alert />
     </>
   );
 }

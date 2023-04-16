@@ -23,6 +23,7 @@ export default {
         checkBlue: "url(assets/images/check-blue.svg)",
         cross: "url(assets/images/cross.svg)",
         mail: "url(assets/images/mail.svg)",
+        checkAlert: "url(assets/images/check-alert.svg)",
       },
 
     },
