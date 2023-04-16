@@ -5,13 +5,12 @@ import ActionButton from "./ActionButton";
 
 function Header() {
   const hasSmallScreen = window.innerWidth < 1090;
-  const dispatch = useDispatch();
 
   return (
     <header className="flex justify-between w-full py-10 items-center gap-6">
       <div className="flex gap-5 items-center h-10">
         <img
-          src="/assets/images/logo.png"
+          src="./assets/images/logo.png"
           className="w-20 rounded-md bg-contain bg-center"
         ></img>
         <p className=" text-xl md:text-3xl pb-1 font-semibold tracking-wider">
