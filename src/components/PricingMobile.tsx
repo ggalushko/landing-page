@@ -2,7 +2,7 @@ import { useState } from "react";
 import PricingCard from "./PricingCard";
 import PricingSwitch from "./PricingSwitch";
 import SectionText from "./SectionText";
-import pricePackagesJSON from "../assets/data/pricePackages.json";
+import pricePackagesJSON from "../data/pricePackages.json";
 
 const pricePacks = {
   1: pricePackagesJSON.basic,

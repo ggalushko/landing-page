@@ -23,7 +23,7 @@ function Quote() {
         </Slide>
         <Fade className="w-2/5" delay={1000} triggerOnce>
           <img
-            src="../../src/assets/images/robot.png"
+            src="/assets/images/robot.png"
             className="w-full mt-5"
           ></img>
         </Fade>

@@ -18,12 +18,12 @@ export default {
         xs: "450px",
       },
       backgroundImage: {
-        plus: "url(assets/images/plus.svg)",
-        checkGreen: "url(assets/images/check-green.svg)",
-        checkBlue: "url(assets/images/check-blue.svg)",
-        cross: "url(assets/images/cross.svg)",
-        mail: "url(assets/images/mail.svg)",
-        checkAlert: "url(assets/images/check-alert.svg)",
+        plus: "url(/assets/images/plus.svg)",
+        checkGreen: "url(/assets/images/check-green.svg)",
+        checkBlue: "url(/assets/images/check-blue.svg)",
+        cross: "url(/assets/images/cross.svg)",
+        mail: "url(/assets/images/mail.svg)",
+        checkAlert: "url(/assets/images/check-alert.svg)",
       },
 
     },

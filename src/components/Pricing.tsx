@@ -1,6 +1,6 @@
 import PricingCard from "./PricingCard";
 import SectionText from "./SectionText";
-import pricePackages from "../assets/data/pricePackages.json";
+import pricePackages from "../data/pricePackages.json";
 import { Zoom, Slide } from "react-awesome-reveal";
 
 function Pricing() {

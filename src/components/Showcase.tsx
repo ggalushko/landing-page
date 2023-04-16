@@ -16,7 +16,7 @@ function Showcase() {
       <div className="flex gap-10 flex-wrap justify-center mt-12 sm:mt-24 mb-10">
         <Zoom duration={1500} delay={700} cascade triggerOnce>
           <ShowcaseCard
-            imgSrc="../../src/assets/images/factory.jpg"
+            imgSrc="/assets/images/factory.jpg"
             imgCaption="Factories in Tokyo"
             header="Quality control"
             text="At Robotica, we take great pride in the quality of our robotic prostheses. 
@@ -24,7 +24,7 @@ function Showcase() {
           We use rigorous testing and quality control measures to ensure that each product meets our high standards."
           />
           <ShowcaseCard
-            imgSrc="../../src/assets/images/ai.jpg"
+            imgSrc="/assets/images/ai.jpg"
             imgCaption="The best AI"
             header="AI modules"
             text="Our robotic prostheses are equipped with AI modules, which can learn and adapt to the user's movements over time, 
@@ -32,7 +32,7 @@ function Showcase() {
           and functionality that was previously unavailable in traditional prostheses."
           />
           <ShowcaseCard
-            imgSrc="../../src/assets/images/customization.jpg"
+            imgSrc="/assets/images/customization.jpg"
             imgCaption="The entire universe of options"
             header="Customization"
             text="We understand that every individual's needs and preferences are unique. 
