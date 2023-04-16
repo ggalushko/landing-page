@@ -12,7 +12,7 @@ function Hero() {
         <div className="flex h-1/5">
           <Slide duration={3000} className="w-1/2" triggerOnce>
             <img
-              src="/assets/images/hand-2.png"
+              src="./assets/images/hand-2.png"
               className="-translate-x-[15px] xs:-translate-x-[60px] "
             ></img>
           </Slide>
@@ -23,7 +23,7 @@ function Hero() {
             triggerOnce
           >
             <img
-              src="/assets/images/hand.png"
+              src="./assets/images/hand.png"
               className=" translate-x-[15px] xs:translate-x-[50px] ml-0 mr-auto w-full"
             ></img>
           </Slide>
@@ -70,24 +70,24 @@ function Hero() {
           onMouseEnter={() => {
             setFocusedImage(1);
           }}
-          src="/assets/images//hero-1.png"
+          src="./assets/images//hero-1.png"
         ></img>
         <img
-          src="/assets/images/hero-2.png"
+          src="./assets/images/hero-2.png"
           className={imageClass + `${focusedImage == 2 ? " scale-150" : ""}`}
           onMouseEnter={() => {
             setFocusedImage(2);
           }}
         ></img>
         <img
-          src="/assets/images/hero-3.png"
+          src="./assets/images/hero-3.png"
           className={imageClass + `${focusedImage == 3 ? " scale-150" : ""}`}
           onMouseEnter={() => {
             setFocusedImage(3);
           }}
         ></img>
         <img
-          src="/assets/images/hero-4.png"
+          src="./assets/images/hero-4.png"
           className={imageClass + `${focusedImage == 4 ? " scale-150" : ""}`}
           onMouseEnter={() => {
             setFocusedImage(4);

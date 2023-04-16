@@ -26,7 +26,7 @@ function Testimonial() {
       >
         <div className="flex gap-2 justify-center items-center h-32">
           <img
-            src="/assets/images/face-1.png"
+            src="./assets/images/face-1.png"
             ref={img1ref}
             className="w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50"
             onClick={() => {
@@ -36,7 +36,7 @@ function Testimonial() {
           ></img>
           <img
             ref={img2ref}
-            src="/assets/images/face-2.png"
+            src="./assets/images/face-2.png"
             className="w-32 h-32 rounded-full transition-all duration-1000 cursor-pointer"
             onClick={() => {
               showFeedback(feedbacks.second);
@@ -45,7 +45,7 @@ function Testimonial() {
           ></img>
           <img
             ref={img3ref}
-            src="/assets/images/face-3.png"
+            src="./assets/images/face-3.png"
             className="w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50"
             onClick={() => {
               showFeedback(feedbacks.third);

@@ -5,7 +5,7 @@ function Footer() {
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-0">
         <div className="flex flex-col lg:flex-row gap-5 items-center">
           <img
-            src="/assets/images/logo.png"
+            src="./assets/images/logo.png"
             className="w-20 rounded-md bg-contain bg-center"
           ></img>
           <p className=" text-3xl pb-1 font-semibold tracking-wider">
