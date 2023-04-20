@@ -5,6 +5,7 @@ function Hero() {
   const imageClass =
     "w-36 h-36 sm:w-48 sm:h-48 transition-transform duration-500 rounded-4xl object-contain";
   const [focusedImage, setFocusedImage] = useState(0);
+  const imageIDs = [1, 2, 3, 4];
 
   return (
     <section className="my-12 mb-20">
@@ -65,34 +66,19 @@ function Hero() {
         </div>
       </Fade>
       <div className="flex flex-wrap justify-center lg:justify-between items-end px-4 gap-14  max-w-screen-xl">
-        <img
-          className={imageClass + `${focusedImage == 1 ? " scale-150" : ""}`}
-          onMouseEnter={() => {
-            setFocusedImage(1);
-          }}
-          src="./assets/images//hero-1.png"
-        ></img>
-        <img
-          src="./assets/images/hero-2.png"
-          className={imageClass + `${focusedImage == 2 ? " scale-150" : ""}`}
-          onMouseEnter={() => {
-            setFocusedImage(2);
-          }}
-        ></img>
-        <img
-          src="./assets/images/hero-3.png"
-          className={imageClass + `${focusedImage == 3 ? " scale-150" : ""}`}
-          onMouseEnter={() => {
-            setFocusedImage(3);
-          }}
-        ></img>
-        <img
-          src="./assets/images/hero-4.png"
-          className={imageClass + `${focusedImage == 4 ? " scale-150" : ""}`}
-          onMouseEnter={() => {
-            setFocusedImage(4);
-          }}
-        ></img>
+        <>
+          {imageIDs.map((id) => (
+            <img
+              className={
+                imageClass + `${focusedImage == id ? " scale-150" : ""}`
+              }
+              onMouseEnter={() => {
+                setFocusedImage(id);
+              }}
+              src={`./assets/images//hero-${id}.png`}
+            ></img>
+          ))}
+        </>
       </div>
     </section>
   );
