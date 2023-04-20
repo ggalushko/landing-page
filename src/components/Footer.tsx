@@ -1,4 +1,15 @@
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { RootState } from "../store/store";
+import { hideAlert, showAlert } from "../store/alertSlice";
+
 function Footer() {
+  const [inputValue, setInputValue] = useState("");
+  const inputIsValid = inputValue.match(
+    /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+  );
+  const dispatch = useDispatch();
+
   return (
     <footer className="py-14">
       <figure className="w-full h-1 bg-dark my-6"></figure>
@@ -20,17 +31,34 @@ function Footer() {
         </p>
 
         <div className="flex  items-center justify-center gap-3 h-10 mt-10 sm:mt-0">
-          <div className="flex items-center border border-secondary border-opacity-60 h-10 rounded-md">
+          <div
+            className={`flex items-center border-opacity-60 h-10 rounded-md ${
+              inputIsValid
+                ? "border border-green-600"
+                : "border border-secondary"
+            }`}
+          >
             <div className=" bg-mail w-7 h-5 bg-center bg-contain bg-no-repeat ml-1"></div>
             <input
               type="email"
               placeholder="Enter email"
               className="px-3 py-2 rounded-lg bg-transparent focus:outline-none"
+              value={inputValue}
+              onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
+                setInputValue(e.target.value);
+              }}
             />
           </div>
           <button
             className="max-w-24 p-2 bg-button font-semibold block rounded-md
-          hover:scale-105 transition-transform duration-500 "
+          hover:scale-105 transition-transform duration-500"
+            onClick={() => {
+              setInputValue("");
+              dispatch(showAlert());
+              setTimeout(() => {
+                dispatch(hideAlert());
+              }, 3000);
+            }}
           >
             Subscribe
           </button>
