@@ -12,6 +12,7 @@
 - Код написан на TypeScript
 - State managment через Redux Toolkit
 - Валидация форм без сторонних библиотек
+- Barrel export 
 - Стилизация через Tailwind CSS
 - Сборка через Vite
 - Анимации появления элементов через библиотеку Reasct Awesome Reveal
