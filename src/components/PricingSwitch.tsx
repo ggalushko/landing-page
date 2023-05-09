@@ -1,9 +1,19 @@
-import { useState } from "react";
-type props = {
-  sliderPosition: 1 | 2 | 3;
-  setSliderPosition: React.Dispatch<React.SetStateAction<1 | 2 | 3>>;
+type Props = {
+  sliderPosition: number;
+  setSliderPosition: React.Dispatch<React.SetStateAction<number>>;
 };
-function PricingSwitch({ sliderPosition, setSliderPosition }: props) {
+
+type Signature = {
+  [key: number]: string;
+};
+// const letters: Signature = {
+//   1: "A",
+//   2: "B",
+//   3: "C",
+// };
+
+const options = ["A", "B", "C"];
+export function PricingSwitch({ sliderPosition, setSliderPosition }: Props) {
   return (
     <div
       className={` w-72 py-3 flex gap-6  bg-white text-black rounded-3xl justify-center relative
@@ -13,7 +23,22 @@ function PricingSwitch({ sliderPosition, setSliderPosition }: props) {
        )} 
        }`}
     >
-      <p
+      {options.map((option, index) => {
+        return (
+          <p
+          key={option}
+            className={`z-10  transition-colors duration-300 ${
+              sliderPosition == index + 1 ? "text-white" : ""
+            }`}
+            onClick={() => {
+              setSliderPosition(index + 1);
+            }}
+          >
+            {`Option ${option}`}
+          </p>
+        );
+      })}
+      {/* <p
         className={`z-10  transition-colors duration-300 ${
           sliderPosition == 1 ? "text-white" : ""
         }`}
@@ -42,7 +67,7 @@ function PricingSwitch({ sliderPosition, setSliderPosition }: props) {
         }}
       >
         Option C
-      </p>
+      </p> */}
     </div>
   );
   function getSliderTranslate(position: number) {
@@ -56,5 +81,3 @@ function PricingSwitch({ sliderPosition, setSliderPosition }: props) {
     }
   }
 }
-
-export default PricingSwitch;

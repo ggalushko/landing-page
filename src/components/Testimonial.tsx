@@ -1,21 +1,22 @@
 import { useRef, useState } from "react";
-import reviews from "../data/reviews.json";
+import { feedbacks } from "../data/feedbacks.json";
 import { Fade } from "react-awesome-reveal";
-const feedbacks = reviews;
+import { Feedback } from "../types/Feedback";
+import { ImageRefsSignature } from "../types/imageRefsSignature";
 
-type feedback = {
-  text: string;
-  name: string;
-  link: string;
-};
-
-function Testimonial() {
-  const [currentFeedback, setCurrentFeedback] = useState(feedbacks.second);
-
+export function Testimonial() {
+  const [currentFeedback, setCurrentFeedback] = useState(feedbacks[1]);
   const paragraphRef = useRef<HTMLParagraphElement>(null);
+
   const img1ref = useRef<HTMLImageElement>(null);
   const img2ref = useRef<HTMLImageElement>(null);
   const img3ref = useRef<HTMLImageElement>(null);
+
+  const imageRefs: ImageRefsSignature = {
+    1: img1ref,
+    2: img2ref,
+    3: img3ref,
+  };
   const [focusedImage, setFocusedImage] = useState(img2ref);
 
   return (
@@ -25,33 +26,24 @@ function Testimonial() {
         id="feedback"
       >
         <div className="flex gap-2 justify-center items-center h-32">
-          <img
-            src="./assets/images/face-1.png"
-            ref={img1ref}
-            className="w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50"
-            onClick={() => {
-              focusUserImage(img1ref);
-              showFeedback(feedbacks.first);
-            }}
-          ></img>
-          <img
-            ref={img2ref}
-            src="./assets/images/face-2.png"
-            className="w-32 h-32 rounded-full transition-all duration-1000 cursor-pointer"
-            onClick={() => {
-              showFeedback(feedbacks.second);
-              focusUserImage(img2ref);
-            }}
-          ></img>
-          <img
-            ref={img3ref}
-            src="./assets/images/face-3.png"
-            className="w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50"
-            onClick={() => {
-              showFeedback(feedbacks.third);
-              focusUserImage(img3ref);
-            }}
-          ></img>
+          {feedbacks.map((feedback, index) => {
+            return (
+              <img
+                key={feedback.name}
+                src={`./assets/images/face-${index + 1}.png`}
+                ref={imageRefs[index + 1]}
+                className={
+                  index == 1
+                    ? "w-32 h-32 rounded-full transition-all duration-1000 cursor-pointer"
+                    : `w-16 h-16 rounded-full transition-all duration-1000 cursor-pointer opacity-50`
+                }
+                onClick={() => {
+                  focusUserImage(imageRefs[index + 1]);
+                  showFeedback(feedback);
+                }}
+              ></img>
+            );
+          })}
         </div>
         <div ref={paragraphRef} className=" transition-opacity duration-700">
           <p className="text-xl md:text-3xl font-semibold max-w-[820px] text-center">
@@ -106,7 +98,7 @@ function Testimonial() {
     setFocusedImage(newFocusedImg);
   }
 
-  function showFeedback(feedback: feedback) {
+  function showFeedback(feedback: Feedback) {
     paragraphRef.current?.classList.add("opacity-0");
     setTimeout(() => {
       setCurrentFeedback(feedback);
@@ -114,5 +106,3 @@ function Testimonial() {
     }, 800);
   }
 }
-
-export default Testimonial;

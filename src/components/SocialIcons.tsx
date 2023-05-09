@@ -1,4 +1,4 @@
-function SocialIcons() {
+export function SocialIcons() {
   return (
     <div className="flex gap-5 justify-center">
       <a href="https://www.facebook.com" target="_blank" rel="noopener">
@@ -28,5 +28,3 @@ function SocialIcons() {
     </div>
   );
 }
-
-export default SocialIcons;

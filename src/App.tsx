@@ -1,15 +1,17 @@
-import Alert from "./components/Alert";
-import CallToAction from "./components/CallToAction";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import ModalPurchase from "./components/ModalPurchase";
-import Pricing from "./components/Pricing";
-import PricingMobile from "./components/PricingMobile";
-import Quote from "./components/Quote";
-import Showcase from "./components/Showcase";
-import Testimonial from "./components/Testimonial";
+import {
+  Header,
+  Hero,
+  CallToAction,
+  Testimonial,
+  Showcase,
+  Quote,
+  Pricing,
+  PricingMobile,
+  Contact,
+  Footer,
+  ModalPurchase,
+  Alert,
+} from "./components";
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 
-function Hero() {
+export function Hero() {
   const imageClass =
     "w-36 h-36 sm:w-48 sm:h-48 transition-transform duration-500 rounded-4xl object-contain";
   const [focusedImage, setFocusedImage] = useState(0);
@@ -69,6 +69,7 @@ function Hero() {
         <>
           {imageIDs.map((id) => (
             <img
+              key={id}
               className={
                 imageClass + `${focusedImage == id ? " scale-150" : ""}`
               }
@@ -83,5 +84,3 @@ function Hero() {
     </section>
   );
 }
-
-export default Hero;

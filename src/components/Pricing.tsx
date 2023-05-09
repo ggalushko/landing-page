@@ -1,9 +1,9 @@
-import PricingCard from "./PricingCard";
-import SectionText from "./SectionText";
+import { PricingCard } from "./PricingCard";
+import { SectionText } from "./SectionText";
 import pricePackages from "../data/pricePackages.json";
 import { Zoom, Slide } from "react-awesome-reveal";
 
-function Pricing() {
+export function Pricing() {
   return (
     <section className="pt-20" id="pricing">
       <Slide duration={2000} direction="right" triggerOnce>
@@ -23,5 +23,3 @@ function Pricing() {
     </section>
   );
 }
-
-export default Pricing;

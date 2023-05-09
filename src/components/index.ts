@@ -1,0 +1,12 @@
+export { Alert } from "./Alert";
+export { CallToAction } from "./CallToAction";
+export { Contact } from "./Contact";
+export { Footer } from "./Footer";
+export { Header } from "./Header";
+export { Hero } from "./Hero";
+export { ModalPurchase } from "./ModalPurchase";
+export { Pricing } from "./Pricing";
+export { PricingMobile } from "./PricingMobile";
+export { Quote } from "./Quote";
+export { Showcase } from "./Showcase";
+export { Testimonial } from "./Testimonial";

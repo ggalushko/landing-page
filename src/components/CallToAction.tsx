@@ -1,9 +1,9 @@
 import { Fade } from "react-awesome-reveal";
-import ActionButton from "./ActionButton";
+import { ActionButton } from "./ActionButton";
 
-function CallToAction() {
+export function CallToAction() {
   return (
-    <Fade  delay={1000} triggerOnce>
+    <Fade delay={1000} triggerOnce>
       <section
         className="bg-dark flex flex-col gap-8 sm:gap-14 rounded-3xl px-2 xs:px-10 py-5  
     items-center text-center max-w-screen-xl mx-auto mt-20"
@@ -24,10 +24,8 @@ function CallToAction() {
           the future of prosthetics and take the first step towards transforming
           your life today
         </p>
-        <ActionButton text="Experience"/>
+        <ActionButton text="Experience" />
       </section>
     </Fade>
   );
 }
-
-export default CallToAction;

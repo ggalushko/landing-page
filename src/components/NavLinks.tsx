@@ -1,4 +1,4 @@
-function NavLinks() {
+export function NavLinks() {
   const className = "hover:opacity-60 transition-opacity";
   return (
     <>
@@ -23,5 +23,3 @@ function NavLinks() {
     </>
   );
 }
-
-export default NavLinks;

@@ -1,23 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
-import PricingCheckbox from "./PricingCheckbox";
+import { useDispatch } from "react-redux";
+import { PricingCheckbox } from "./PricingCheckbox";
 import { openModal, setPackage, setPrice } from "../store/modalSlice";
-import { useEffect, useState } from "react";
-import { RootState } from "../store/store";
-type extraOption = {
-  name: string;
-  price: number;
-};
-type pack = {
-  pack: {
-    name: string;
-    initialPrice: number;
-    description: string;
-    includedOptions: string[];
-    extraOptions: extraOption[];
-  };
-};
+import { useState } from "react";
+import { Pack } from "../types/Pack";
 
-function PricingCard({ pack }: pack) {
+export function PricingCard({ pack }: Pack) {
   const dispatch = useDispatch();
   const [totalPrice, setTotalPrice] = useState(pack.initialPrice);
 
@@ -66,5 +53,3 @@ function PricingCard({ pack }: pack) {
     </div>
   );
 }
-
-export default PricingCard;

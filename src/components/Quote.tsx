@@ -1,6 +1,6 @@
-import { Slide,  Fade } from "react-awesome-reveal";
+import { Slide, Fade } from "react-awesome-reveal";
 
-function Quote() {
+export function Quote() {
   return (
     <>
       <figure className="w-full h-1 bg-dark mb-2 sm:mb-6 mt-12"></figure>
@@ -22,15 +22,10 @@ function Quote() {
           </div>
         </Slide>
         <Fade className="w-2/5" delay={1000} triggerOnce>
-          <img
-            src="./assets/images/robot.png"
-            className="w-full mt-5"
-          ></img>
+          <img src="./assets/images/robot.png" className="w-full mt-5"></img>
         </Fade>
       </section>
       <figure className="w-full h-1 bg-dark"></figure>
     </>
   );
 }
-
-export default Quote;

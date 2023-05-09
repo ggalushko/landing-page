@@ -1,15 +1,13 @@
 import { useState } from "react";
-import NavSlider from "./NavSlider";
-import BurgerButton from "./BurgerButton";
+import { NavDrawer } from "./NavDrawer";
+import { BurgerButton } from "./BurgerButton";
 
-function BurgerMenu() {
+export function BurgerMenu() {
   const [isOpened, setIsopened] = useState(false);
   return (
     <>
       <BurgerButton isOpened={isOpened} setIsOpened={setIsopened} />
-      <NavSlider isOpened={isOpened} setIsOpened={setIsopened} />
+      <NavDrawer isOpened={isOpened} setIsOpened={setIsopened} />
     </>
   );
 }
-
-export default BurgerMenu;

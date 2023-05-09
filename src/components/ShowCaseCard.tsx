@@ -1,11 +1,11 @@
-type props = {
+type Props = {
   imgSrc: string;
   imgCaption: string;
   header: string;
   text: string;
 };
 
-function ShowcaseCard({ imgSrc, imgCaption, header, text }: props) {
+export function ShowcaseCard({ imgSrc, imgCaption, header, text }: Props) {
   return (
     <div className="flex flex-col w-[350px] gap-4">
       <img
@@ -19,5 +19,3 @@ function ShowcaseCard({ imgSrc, imgCaption, header, text }: props) {
     </div>
   );
 }
-
-export default ShowcaseCard;

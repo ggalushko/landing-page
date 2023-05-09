@@ -1,17 +1,18 @@
 import { useState } from "react";
-import PricingCard from "./PricingCard";
-import PricingSwitch from "./PricingSwitch";
-import SectionText from "./SectionText";
+import { PricingCard } from "./PricingCard";
+import { PricingSwitch } from "./PricingSwitch";
+import { SectionText } from "./SectionText";
 import pricePackagesJSON from "../data/pricePackages.json";
+import { PackSignature } from "../types/PackSignature";
 
-const pricePacks = {
+const pricePacks: PackSignature = {
   1: pricePackagesJSON.basic,
   2: pricePackagesJSON.advanced,
   3: pricePackagesJSON.elite,
 };
 
-function PricingMobile() {
-  const [sliderPosition, setSliderPosition] = useState<1 | 2 | 3>(1);
+export function PricingMobile() {
+  const [sliderPosition, setSliderPosition] = useState(1);
   return (
     <section className="flex flex-col gap-12 items-center mt-20" id="pricing">
       <SectionText
@@ -27,5 +28,3 @@ function PricingMobile() {
     </section>
   );
 }
-
-export default PricingMobile;

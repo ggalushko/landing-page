@@ -1,6 +1,6 @@
-import NavLinks from "./NavLinks";
+import {NavLinks} from "./NavLinks";
 
-function NavSlider(props: {
+export function NavDrawer(props: {
   isOpened: boolean;
   setIsOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
@@ -28,5 +28,3 @@ function NavSlider(props: {
     </div>
   );
 }
-
-export default NavSlider;

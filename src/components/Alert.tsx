@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
 
-function Alert() {
+export function Alert() {
   const isVisible = useSelector((state: RootState) => state.alert.isVisible);
 
   return (
@@ -19,5 +19,3 @@ function Alert() {
     </div>
   );
 }
-
-export default Alert;

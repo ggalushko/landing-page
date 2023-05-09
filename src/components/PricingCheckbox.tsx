@@ -1,19 +1,20 @@
 import { useRef, useState } from "react";
 
-type prop = {
+type Props = {
   name: string;
   included: boolean;
   price?: number;
   totalPrice?: number;
   setTotalPrice?: React.Dispatch<React.SetStateAction<number>>;
 };
-function PricingCheckbox({
+
+export function PricingCheckbox({
   name,
   included,
   price,
   totalPrice,
   setTotalPrice,
-}: prop) {
+}: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputRefChecked, setInputRefChecked] = useState(false);
   return (
@@ -41,5 +42,3 @@ function PricingCheckbox({
     </div>
   );
 }
-
-export default PricingCheckbox;

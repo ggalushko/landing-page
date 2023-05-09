@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { RootState } from "../store/store";
 import { hideAlert, showAlert } from "../store/alertSlice";
 
-function Footer() {
+export function Footer() {
   const [inputValue, setInputValue] = useState("");
   const inputIsValid = inputValue.match(
     /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -67,5 +66,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

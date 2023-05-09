@@ -1,9 +1,8 @@
-import { useDispatch } from "react-redux";
-import BurgerMenu from "./BurgerMenu";
-import NavLinks from "./NavLinks";
-import ActionButton from "./ActionButton";
+import { BurgerMenu } from "./BurgerMenu";
+import { NavLinks } from "./NavLinks";
+import { ActionButton } from "./ActionButton";
 
-function Header() {
+export function Header() {
   const hasSmallScreen = window.innerWidth < 1090;
 
   return (
@@ -17,14 +16,12 @@ function Header() {
           Robotica
         </p>
       </div>
-      {!hasSmallScreen ? (
+      {!hasSmallScreen && (
         <nav className="text-link text-xl flex gap-7 items-center">
           <NavLinks />
         </nav>
-      ) : null}
-      {hasSmallScreen ? <BurgerMenu /> : <ActionButton text="Discover"/>}
+      )}
+      {hasSmallScreen ? <BurgerMenu /> : <ActionButton text="Discover" />}
     </header>
   );
 }
-
-export default Header;

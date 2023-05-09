@@ -4,7 +4,7 @@ import { closeModal } from "../store/modalSlice";
 import { RootState } from "../store/store";
 import { hideAlert, showAlert } from "../store/alertSlice";
 
-function ModalPurchase() {
+export function ModalPurchase() {
   const modalRef = useRef<HTMLDivElement | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const modalState = useSelector((state: RootState) => state.modal);
@@ -136,10 +136,10 @@ function ModalPurchase() {
           onClick={(e) => {
             e.preventDefault();
             dispatch(closeModal());
-            dispatch(showAlert())
-               setTimeout(() => {
-                dispatch(hideAlert())
-               }, 3000);
+            dispatch(showAlert());
+            setTimeout(() => {
+              dispatch(hideAlert());
+            }, 3000);
             clearInputs();
           }}
         >
@@ -156,5 +156,3 @@ function ModalPurchase() {
     });
   }
 }
-
-export default ModalPurchase;
