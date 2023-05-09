@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { PricingCheckbox } from "./PricingCheckbox";
 import { openModal, setPackage, setPrice } from "../store/modalSlice";
 import { useState } from "react";
-import { Pack } from "../types/Pack";
+import { Pack } from "../types";
 
 export function PricingCard({ pack }: Pack) {
   const dispatch = useDispatch();

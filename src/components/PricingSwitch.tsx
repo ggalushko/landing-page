@@ -2,17 +2,8 @@ type Props = {
   sliderPosition: number;
   setSliderPosition: React.Dispatch<React.SetStateAction<number>>;
 };
-
-type Signature = {
-  [key: number]: string;
-};
-// const letters: Signature = {
-//   1: "A",
-//   2: "B",
-//   3: "C",
-// };
-
 const options = ["A", "B", "C"];
+
 export function PricingSwitch({ sliderPosition, setSliderPosition }: Props) {
   return (
     <div

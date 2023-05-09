@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import { feedbacks } from "../data/feedbacks.json";
 import { Fade } from "react-awesome-reveal";
-import { Feedback } from "../types/Feedback";
-import { ImageRefsSignature } from "../types/imageRefsSignature";
+import { Feedback } from "../types";
+import { ImageRefsSignature } from "../types";
 
 export function Testimonial() {
   const [currentFeedback, setCurrentFeedback] = useState(feedbacks[1]);

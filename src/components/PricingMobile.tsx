@@ -3,7 +3,7 @@ import { PricingCard } from "./PricingCard";
 import { PricingSwitch } from "./PricingSwitch";
 import { SectionText } from "./SectionText";
 import pricePackagesJSON from "../data/pricePackages.json";
-import { PackSignature } from "../types/PackSignature";
+import { PackSignature } from "../types";
 
 const pricePacks: PackSignature = {
   1: pricePackagesJSON.basic,
